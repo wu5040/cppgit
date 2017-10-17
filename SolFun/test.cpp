@@ -1,3 +1,4 @@
+//test.cpp
 #include <iostream>
 #include <cmath>
 
@@ -8,7 +9,7 @@ double delta(double a,double b,double c)
 	return b*b-4*a*c;
 }
 
-//Ö¸ÕëĞÎ²Î
+//æŒ‡é’ˆå½¢å‚
 int solver1(double a,double b,double c,double *x1,double *x2)
 {
 	double d=delta(a,b,c);
@@ -23,7 +24,7 @@ int solver1(double a,double b,double c,double *x1,double *x2)
 		return 1;
 }
 
-//ÒıÓÃĞÎ²Î
+//å¼•ç”¨å½¢å‚
 int solver2(double a,double b,double c,double &x1,double &x2)
 {
 	double d=delta(a,b,c);
@@ -38,13 +39,13 @@ int solver2(double a,double b,double c,double &x1,double &x2)
 		return 1;
 }
 
-//¶¨Òå½á¹¹Ìå
+//å®šä¹‰ç»“æ„ä½“
 struct result
 {
 	double x1,x2;
 };
 
-//½á¹¹ÌåÒıÓÃĞÎ²Î
+//ç»“æ„ä½“å¼•ç”¨å½¢å‚
 int solver3(double a,double b,double c,result &s)
 {
 	double d=delta(a,b,c);
@@ -62,7 +63,7 @@ int solver3(double a,double b,double c,result &s)
 		}
 }
 
-//·µ»Ø½á¹¹Ìå
+//è¿”å›ç»“æ„ä½“
 
 struct result solver(double a,double b,double d)
 {
@@ -87,7 +88,7 @@ int solver4(double a,double b,double c,result &t)
 		}
 }
 
-//½á¹ûÊä³öº¯Êı
+//ç»“æœè¾“å‡ºå‡½æ•°
 void show(int flag,double x1,double x2)
 {
 	if(x1==-0)
@@ -95,11 +96,11 @@ void show(int flag,double x1,double x2)
 	if(x2==-0)
 		x2=-x2;
 	if(flag==0)
-		cout<<"¸Ã·½³ÌÎŞÊµ¸ù¡£"<<endl;
+		cout<<"è¯¥æ–¹ç¨‹æ— å®æ ¹ã€‚"<<endl;
 	else if(flag==1)
-		cout<<"¸Ã·½³ÌÓĞÖØ¸ù x1 = x2 = "<<x1<<endl;
+		cout<<"è¯¥æ–¹ç¨‹æœ‰é‡æ ¹ x1 = x2 = "<<x1<<endl;
 	else
-		cout<<"¸Ã·½³ÌµÄ¸ùÎª x1 = "<<x1<<", x2 = "<<x2<<endl;
+		cout<<"è¯¥æ–¹ç¨‹çš„æ ¹ä¸º x1 = "<<x1<<", x2 = "<<x2<<endl;
 }
 
 int main()
@@ -112,20 +113,20 @@ int main()
 			a=0;
 			while(a==0)
 				{
-					cout<<"ÊäÈëÏµÊı a b c£º";
+					cout<<"è¾“å…¥ç³»æ•° a b cï¼š";
 					cin>>a>>b>>c;
 					if(a==0)
-						cout<<"a²»ÄÜÎªÁã£¬ÇëÖØĞÂ";
+						cout<<"aä¸èƒ½ä¸ºé›¶ï¼Œè¯·é‡æ–°";
 				}
 			cout<<"----------------------------"<<endl;
-			cout<<"|       1-Ö¸ÕëĞÎ²Î         |"<<endl;
-			cout<<"|       2-ÒıÓÃĞÎ²Î         |"<<endl;
-			cout<<"|     3-½á¹¹ÌåÒıÓÃĞÎ²Î     |"<<endl;
-			cout<<"|      4-·µ»Ø½á¹¹Ìå        |"<<endl;
-			cout<<"|       9-¸Ä±äÏµÊı         |"<<endl;
-			cout<<"|       0-ÍË³ö³ÌĞò         |"<<endl;
+			cout<<"|       1-æŒ‡é’ˆå½¢å‚         |"<<endl;
+			cout<<"|       2-å¼•ç”¨å½¢å‚         |"<<endl;
+			cout<<"|     3-ç»“æ„ä½“å¼•ç”¨å½¢å‚     |"<<endl;
+			cout<<"|      4-è¿”å›ç»“æ„ä½“        |"<<endl;
+			cout<<"|       9-æ”¹å˜ç³»æ•°         |"<<endl;
+			cout<<"|       0-é€€å‡ºç¨‹åº         |"<<endl;
 			cout<<"----------------------------"<<endl<<endl;
-			cout<<"ÇëÊäÈëÏàÓ¦µÄÊı×Ö£º";
+			cout<<"è¯·è¾“å…¥ç›¸åº”çš„æ•°å­—ï¼š";
 			while(cin>>n)
 				{
 					if(n==1)
@@ -150,7 +151,7 @@ int main()
 						}
 					else
 						break;
-					cout<<endl<<"ÇëÊäÈëÏàÓ¦µÄÊı×Ö£º";
+					cout<<endl<<"è¯·è¾“å…¥ç›¸åº”çš„æ•°å­—ï¼š";
 				}
 			cout<<endl;
 		}
