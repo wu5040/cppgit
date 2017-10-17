@@ -1,3 +1,4 @@
+//array.cpp
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
@@ -54,7 +55,7 @@ int main()
 {
     int **p;
     int m,n;
-    cout<<"ÊäÈë¶þÎ¬Êý×éÐÐÊý ÁÐÊý m n£º ";
+    cout<<"è¾“å…¥äºŒç»´æ•°ç»„è¡Œæ•° åˆ—æ•° m nï¼š ";
     cin>>m>>n;
 	New2D_1(p,m,n);
     //p=New2D_2(p,m,n);
