@@ -1,6 +1,8 @@
 #include <iostream>
 #include <iomanip>
-#include "Matrix.h"
+#include "matrix.h"
+#include "Vector.h"
+using namespace std;
 
 Matrix::Matrix(int r,int c,const double *a)           //构造函数
 {
@@ -54,24 +56,12 @@ Matrix & Matrix::operator=(const Matrix &m)     //深赋值
 }
 
 
-Matrix::~Matrix()
+Matrix::~Matrix()                                //虚析构
 {
     if(x!=NULL)
         delete [] x;
 }
-/*
-void Matrix::Set()
-{
-    for(int i=0; i<row; i++)
-    {
-        cout<<"请输入第"<<i+1<<"行的"<<col<<"个数据： ";
-        for(int j=i*col; j<i*col+col-1; j++)
-        {
-            cin>>x[j];
-        }
-    }
-}
-*/
+
 int Matrix::GetRow() const
 {
     return row;
@@ -82,8 +72,9 @@ int Matrix::GetCol() const
     return col;
 }
 
-void Matrix::Show() const
+void Matrix::Show() const                     //展示函数
 {
+
     if(x!=NULL)
     {
         for(int i=0; i<row; i++)
